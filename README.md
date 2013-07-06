@@ -1,4 +1,4 @@
 blog-extras
 ===========
 
-Scripts, stylesheet and images for my personal blog.
+Scripts, stylesheets and images for my personal blog.
