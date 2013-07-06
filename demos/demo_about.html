@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>About</title>
+    <!--Include Twitter Boostrap CSS-->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" 
+          rel="stylesheet"
+          type="text/css"/>
+    <!--Include JQuery-->
+    <script type="text/javascript" 
+            src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+<h4>Please allow me to introduce myself:</h4>
+<!--Center div-->
+<div style="width:100%;
+            /* Firefox */
+            display:-moz-box;
+            -moz-box-pack:center;
+            -moz-box-align:center;
+            /* Safari and Chrome */
+            display:-webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+            /* W3C */
+            display:box;
+            box-pack:center;
+            box-align:center;">
+<a href="http://ro.linkedin.com/pub/bogdan-taranu/36/baa/b81">
+    <img id="LinkedIn" 
+         src="https://dl.dropboxusercontent.com/u/27837837/web/images/about/linkedin.png" 
+         class="img-rounded" /></a>
+<a href="https://twitter.com/iskernel">
+    <img id="Twitter" 
+         src="https://dl.dropboxusercontent.com/u/27837837/web/images/about/twitter.png" 
+         class="img-rounded"/></a>
+<a href="https://bitbucket.org/btaranu/">
+    <img id="Bitbucket" 
+         src="https://dl.dropboxusercontent.com/u/27837837/web/images/about/bitbucket.png" 
+         class="img-rounded" /></a>
+<a href="http://stackoverflow.com/users/1047285/iskernel">
+    <img id="Stack Overflow" 
+         src="https://dl.dropboxusercontent.com/u/27837837/web/images/about/stackoverflow.png" 
+         class="img-rounded" /></a>
+<a href="https://github.com/iskernel">
+    <img id="Github"
+         src="https://dl.dropboxusercontent.com/u/27837837/web/images/about/github.png" 
+         class="img-rounded" /></a>
+</div>
+<h2 style="text-align: center" id="selected"> </h2>
+</body>
+<script type="text/javascript">
+    $('img').load(function()
+    {
+        $(this).data('height', this.height);
+    }).bind('mouseenter mouseleave', function(e)
+    {
+        $(this).stop().animate(
+        {
+            height : $(this).data('height') * (e.type === 'mouseenter' ? 1.25 : 1)            
+        });
+        $('#selected').html($(this).attr('id'));
+    });
+</script>
+</html>
